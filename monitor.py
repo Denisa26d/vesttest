@@ -13,6 +13,7 @@ import json
 import os
 import re
 import sys
+import time
 import unicodedata
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -25,7 +26,14 @@ import config
 SEEN_FILE = Path(__file__).parent / "seen.json"
 SEEN_RETENTION_DAYS = 30
 REQUEST_TIMEOUT = 20
-USER_AGENT = "Mozilla/5.0 (compatible; RomaniaIncidentMonitor/1.0)"
+FETCH_RETRIES = 2
+FETCH_RETRY_DELAY_SECONDS = 5
+REQUEST_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+    "Accept": "application/rss+xml, application/xml;q=0.9, */*;q=0.8",
+    "Accept-Language": "ro-RO,ro;q=0.9,en;q=0.8",
+}
 
 
 def strip_diacritics(text):
@@ -94,14 +102,18 @@ def save_seen(seen):
 
 
 def fetch_feed(source):
-    try:
-        resp = requests.get(source["url"], headers={"User-Agent": USER_AGENT}, timeout=REQUEST_TIMEOUT)
-        resp.raise_for_status()
-    except requests.RequestException as exc:
-        print(f"[warn] failed to fetch {source['name']}: {exc}", file=sys.stderr)
-        return []
-    parsed = feedparser.parse(resp.content)
-    return parsed.entries
+    last_exc = None
+    for attempt in range(1, FETCH_RETRIES + 1):
+        try:
+            resp = requests.get(source["url"], headers=REQUEST_HEADERS, timeout=REQUEST_TIMEOUT)
+            resp.raise_for_status()
+            return feedparser.parse(resp.content).entries
+        except requests.RequestException as exc:
+            last_exc = exc
+            if attempt < FETCH_RETRIES:
+                time.sleep(FETCH_RETRY_DELAY_SECONDS)
+    print(f"[warn] failed to fetch {source['name']}: {last_exc}", file=sys.stderr)
+    return []
 
 
 def format_message(source_name, title, link):
