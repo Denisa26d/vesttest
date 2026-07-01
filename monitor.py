@@ -10,6 +10,7 @@ import hashlib
 import html
 import json
 import os
+import re
 import sys
 import unicodedata
 from datetime import datetime, timedelta, timezone
@@ -35,9 +36,18 @@ def normalize(text):
     return strip_diacritics(text or "").lower()
 
 
+# County/city names are matched as whole words (not substrings) so short
+# names like "Deva" don't collide with unrelated words that merely start
+# with the same letters (e.g. "devastator").
+COUNTY_PATTERNS = [
+    re.compile(r"\b" + re.escape(strip_diacritics(kw).lower()) + r"\b")
+    for kw in config.COUNTY_KEYWORDS
+]
+
+
 def matches_filters(title, summary):
     haystack = normalize(f"{title} {summary}")
-    if not any(kw in haystack for kw in config.COUNTY_KEYWORDS):
+    if not any(p.search(haystack) for p in COUNTY_PATTERNS):
         return False
     if not any(kw in haystack for kw in config.INCLUDE_KEYWORDS):
         return False
