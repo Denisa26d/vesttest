@@ -83,7 +83,7 @@ INCLUDE_KEYWORDS = [
     # border police (relevant here: Timiș/Arad/Caraș-Severin all border
     # Serbia or Hungary, so smuggling/migrant-trafficking busts are common)
     "politia de frontiera", "politisti de frontiera", "frontiera",
-    "contrabanda", "trafic de migranti", "migranti",
+    "contrabanda", "trafic de migranti", "migranti", "perchezitii", "scandal", "bataie",
 ]
 
 # If any of these appear, the item is dropped even if it matched an include
