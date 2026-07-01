@@ -15,10 +15,10 @@ RSS_FEEDS = [
     {"name": "Renașterea Bănățeană (Timiș)", "url": "https://renasterea.ro/feed"},
     {"name": "Banat24 (Timiș/Banat)", "url": "https://banat24.ro/feed"},
     {"name": "PressAlert (Timiș)", "url": "https://www.pressalert.ro/feed"},
-    {"name": "Vest24 (Timiș)", "url": "https://vest24.ro/feed"},
     {"name": "Timișoara Știri (Timiș)", "url": "https://www.timisoarastiri.ro/feed"},
-    # National aggregator, relies on COUNTY_KEYWORDS filtering below to stay relevant
-    {"name": "Știri pe Surse (national, filtered)", "url": "https://www.stiripesurse.ro/feed"},
+    # NOTE: Vest24 and Știri pe Surse both block GitHub Actions' shared-runner
+    # IPs (Cloudflare bot protection) with a 403, even though they work fine
+    # from other IPs. Removed rather than fought — 12 other sources remain.
     # Hunedoara
     {"name": "Servus Press (Hunedoara)", "url": "https://servuspress.ro/feed/"},
     # Arad
