@@ -6,6 +6,7 @@ Telegram. Meant to run every 10 minutes via GitHub Actions; state
 (which items were already sent) is kept in seen.json in the repo.
 """
 import argparse
+import calendar
 import hashlib
 import html
 import json
@@ -36,13 +37,15 @@ def normalize(text):
     return strip_diacritics(text or "").lower()
 
 
+def word_patterns(keywords):
+    return [re.compile(r"\b" + re.escape(strip_diacritics(kw).lower()) + r"\b") for kw in keywords]
+
+
 # County/city names are matched as whole words (not substrings) so short
 # names like "Deva" don't collide with unrelated words that merely start
 # with the same letters (e.g. "devastator").
-COUNTY_PATTERNS = [
-    re.compile(r"\b" + re.escape(strip_diacritics(kw).lower()) + r"\b")
-    for kw in config.COUNTY_KEYWORDS
-]
+COUNTY_PATTERNS = word_patterns(config.COUNTY_KEYWORDS)
+EXCLUDE_PLACE_PATTERNS = word_patterns(config.EXCLUDE_PLACE_KEYWORDS)
 
 
 def matches_filters(title, summary):
@@ -53,7 +56,18 @@ def matches_filters(title, summary):
         return False
     if any(kw in haystack for kw in config.EXCLUDE_KEYWORDS):
         return False
+    if any(p.search(haystack) for p in EXCLUDE_PLACE_PATTERNS):
+        return False
     return True
+
+
+def is_fresh(entry):
+    struct = entry.get("published_parsed") or entry.get("updated_parsed")
+    if not struct:
+        return True  # no date available, don't drop it on that basis
+    published = datetime.fromtimestamp(calendar.timegm(struct), tz=timezone.utc)
+    age = datetime.now(timezone.utc) - published
+    return age <= timedelta(hours=config.MAX_ITEM_AGE_HOURS)
 
 
 def item_id(entry):
@@ -143,6 +157,8 @@ def main():
         for entry in entries:
             uid = item_id(entry)
             if uid in seen:
+                continue
+            if not is_fresh(entry):
                 continue
             title = entry.get("title", "").strip()
             summary = entry.get("summary", "")
