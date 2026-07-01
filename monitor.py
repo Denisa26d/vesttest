@@ -117,8 +117,9 @@ def fetch_feed(source):
 
 
 def format_message(source_name, title, link):
+    icon = "📰" if config.SEND_ALL_ITEMS else "🚨"
     return (
-        f"🚨 <b>{html.escape(title)}</b>\n"
+        f"{icon} <b>{html.escape(title)}</b>\n"
         f"📍 {html.escape(source_name)}\n"
         f"{html.escape(link)}"
     )
@@ -175,13 +176,15 @@ def main():
             title = entry.get("title", "").strip()
             summary = entry.get("summary", "")
             link = entry.get("link", "")
-            if not matches_filters(title, summary):
+            if not config.SEND_ALL_ITEMS and not matches_filters(title, summary):
                 continue
 
             text = format_message(source["name"], title, link)
             if send_telegram(token, chat_id, text, args.dry_run):
                 seen[uid] = now_iso
                 new_count += 1
+                if not args.dry_run:
+                    time.sleep(0.4)  # stay under Telegram's per-chat rate limit
 
     save_seen(seen)
     print(f"Done. {new_count} new item(s) sent.")

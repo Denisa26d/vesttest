@@ -4,6 +4,13 @@ Edit this file to add/remove sources or tune what counts as a match —
 monitor.py itself should not need to change.
 """
 
+# If True, every fresh/unseen item from every feed below is sent to
+# Telegram, and INCLUDE_KEYWORDS / EXCLUDE_KEYWORDS / EXCLUDE_PLACE_KEYWORDS /
+# COUNTY_KEYWORDS are ignored entirely — you filter by reading in Telegram
+# instead of the script filtering for you. Freshness (MAX_ITEM_AGE_HOURS) and
+# dedup still apply either way. Set back to False to resume keyword filtering.
+SEND_ALL_ITEMS = True
+
 # Plain local-news RSS feeds. Add more by finding "<site>/feed" or "<site>/feed/"
 # on any WordPress-based outlet (most Romanian local news sites are WordPress).
 RSS_FEEDS = [
@@ -45,7 +52,7 @@ def all_feeds():
 # Items older than this are ignored, even if never seen before. Keeps a
 # stale/backfilled feed entry (or a first-ever run against a feed with old
 # posts) from dumping months-old "news" into the chat.
-MAX_ITEM_AGE_HOURS = 24
+MAX_ITEM_AGE_HOURS = 5
 
 # Substrings (diacritics-stripped, lowercase) that mark an item as a relevant
 # incident. Stems are used on purpose so conjugations/plurals match too
@@ -96,6 +103,9 @@ EXCLUDE_KEYWORDS = [
     "politica", "guvern", "ministru", "parlament", "senat", "coalitie",
     # figurative uses of fire/crime words in sports & entertainment headlines
     "incendiar", "spargere de tipare", "meci de foc",
+    # "bataie de joc" is a common idiom for "being mishandled/mocked"
+    # (e.g. a project being badly managed), not an actual physical fight
+    "bataie de joc",
 ]
 
 # Same idea as EXCLUDE_KEYWORDS, but matched as whole words (see

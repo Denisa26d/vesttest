@@ -1,8 +1,13 @@
 name: Incident monitor
 
+# No `schedule:` trigger here on purpose: GitHub documents that
+# schedule-triggered runs are best-effort and get delayed/skipped under
+# load, which was too unreliable for a 10-minute cadence. Instead, an
+# external free scheduler (cron-job.org) calls the workflow_dispatch API
+# below every 10 minutes — dispatch runs don't have that deprioritization
+# and start promptly like any on-demand run. See README.md for setup.
+
 on:
-  schedule:
-    - cron: "*/10 * * * *"
   workflow_dispatch: {}
 
 permissions:
