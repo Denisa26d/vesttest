@@ -23,14 +23,19 @@ RSS_FEEDS = [
     {"name": "Banat24 (Timiș/Banat)", "url": "https://banat24.ro/feed"},
     {"name": "PressAlert (Timiș)", "url": "https://www.pressalert.ro/feed"},
     {"name": "Timișoara Știri (Timiș)", "url": "https://www.timisoarastiri.ro/feed"},
+    {"name": "Sursa de Vest (Timiș)", "url": "https://www.sursadevest.ro/feed"},
+    {"name": "Tribuna TM (Timiș)", "url": "https://tribunasnm.ro/feed"},
     # NOTE: Vest24 and Știri pe Surse both block GitHub Actions' shared-runner
     # IPs (Cloudflare bot protection) with a 403, even though they work fine
     # from other IPs. Removed rather than fought — 12 other sources remain.
     # Hunedoara
     {"name": "Servus Press (Hunedoara)", "url": "https://servuspress.ro/feed/"},
-    # Arad
+    {"name": "Stiri din Hunedoara (Hunedoara)", "url": "https://stiridinhunedoara.ro/feed"},
+    {"name": "Mesagerul Hunedorean (Hunedoara)", "url": "https://www.mesagerulhunedorean.ro/feed"},
+    #Arad
     {"name": "Aradon (Arad)", "url": "https://www.aradon.ro/feed"},
     {"name": "Arad24 (Arad)", "url": "https://arad24.net/feed"},
+    {"name": "Glasul Aradului (Arad)", "url": "https://www.glsa.ro/feed"},
     # Caraș-Severin / Reșița
     {"name": "Știrile CS (Caraș-Severin)", "url": "https://stirilecs.ro/feed/"},
     {"name": "Reper24 (Caraș-Severin)", "url": "https://reper24.ro/feed/"},
