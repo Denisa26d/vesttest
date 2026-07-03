@@ -4,11 +4,12 @@ Edit this file to add/remove sources or tune what counts as a match —
 monitor.py itself should not need to change.
 """
 
-# If True, every fresh/unseen item from every feed below is sent to
-# Telegram, and INCLUDE_KEYWORDS / EXCLUDE_KEYWORDS / EXCLUDE_PLACE_KEYWORDS /
-# COUNTY_KEYWORDS are ignored entirely — you filter by reading in Telegram
-# instead of the script filtering for you. Freshness (MAX_ITEM_AGE_HOURS) and
-# dedup still apply either way. Set back to False to resume keyword filtering.
+# Default mode for a county with no explicit override yet (see COUNTY_GROUPS
+# below). If True, every fresh/unseen item for that county is sent to
+# Telegram with keyword/category filtering skipped entirely. Overridden
+# per-county at runtime via the /all and /filtered Telegram bot commands
+# (state persisted in bot_state.json) — editing this only changes the
+# starting default, not an override already in place.
 SEND_ALL_ITEMS = True
 
 # Plain local-news RSS feeds. Add more by finding "<site>/feed" or "<site>/feed/"
@@ -114,7 +115,7 @@ EXCLUDE_KEYWORDS = [
 ]
 
 # Same idea as EXCLUDE_KEYWORDS, but matched as whole words (see
-# COUNTY_KEYWORDS above for why) since these are short place names prone to
+# COUNTY_GROUPS below for why) since these are short place names prone to
 # colliding with unrelated words (e.g. "arad" inside "parada"/parade).
 #
 # News often mentions a Timiș/Hunedoara/CS person ("a woman from Hunedoara")
@@ -127,13 +128,58 @@ EXCLUDE_PLACE_KEYWORDS = [
     "cluj-napoca", "arges", "bucuresti",
 ]
 
+# Most (not all) of the outlets in RSS_FEEDS tag incident-type articles
+# with an "Eveniment" WordPress category — a stronger signal than keyword
+# guessing since it's the outlet's own editorial classification. Used as an
+# extra OR condition alongside INCLUDE_KEYWORDS, not a replacement: several
+# outlets never use this category at all, so relying on it alone would
+# silently drop those sources.
+CATEGORY_HINTS = ["eveniment"]
+
 # Only alert on items whose title/summary mentions one of these places
 # (keeps unrelated national/international stories out of the county feeds).
 # Timiș is the primary focus; Hunedoara, Arad and Caraș-Severin are also
-# in scope.
-COUNTY_KEYWORDS = [
-    "timis", "timisoara",
-    "hunedoara", "deva", "petrosani", "orastie", "hateg", "brad", "vulcan", "lupeni",
-    "arad", "ineu", "lipova", "santana", "curtici", "pecica", "nadlac", "chisineu-cris",
-    "caras-severin", "caras severin", "resita", "oravita", "baile herculane", "otelu rosu", "moldova noua",
-]
+# in scope. Grouped per county (not a flat list) so /all and /filtered bot
+# commands can target one county at a time — see COUNTY_ALIASES below for
+# the names accepted in those commands.
+COUNTY_GROUPS = {
+    "timis": ["timis", "timisoara"],
+    "hunedoara": ["hunedoara", "deva", "petrosani", "orastie", "hateg", "brad", "vulcan", "lupeni"],
+    "arad": ["arad", "ineu", "lipova", "santana", "curtici", "pecica", "nadlac", "chisineu-cris"],
+    "caras-severin": ["caras-severin", "caras severin", "resita", "oravita", "baile herculane",
+                       "otelu rosu", "moldova noua"],
+}
+
+# Names accepted after /all or /filtered in a Telegram command, mapped to
+# the COUNTY_GROUPS key they set. Diacritics/case don't matter (normalized
+# before lookup).
+COUNTY_ALIASES = {
+    "timis": "timis", "timisoara": "timis",
+    "hunedoara": "hunedoara", "hd": "hunedoara", "deva": "hunedoara",
+    "arad": "arad", "ar": "arad",
+    "caras-severin": "caras-severin", "caras severin": "caras-severin",
+    "cs": "caras-severin", "resita": "caras-severin",
+}
+
+# Proper display names (with diacritics) for bot replies.
+COUNTY_DISPLAY_NAMES = {
+    "timis": "Timiș",
+    "hunedoara": "Hunedoara",
+    "arad": "Arad",
+    "caras-severin": "Caraș-Severin",
+}
+
+# When a county is in filtered mode, this controls which signal(s) count as
+# a match: "keyword" = INCLUDE_KEYWORDS only, "category" = CATEGORY_HINTS
+# only, "both" (default) = either one. Set per-county via the /filtered bot
+# command, e.g. "/filtered hunedoara categorie".
+FILTER_TYPE_ALIASES = {
+    "keyword": "keyword", "keywords": "keyword", "cuvinte": "keyword", "cuvant": "keyword",
+    "category": "category", "categorie": "category", "categorii": "category",
+    "both": "both", "amandoua": "both", "ambele": "both",
+}
+FILTER_TYPE_DISPLAY_NAMES = {
+    "keyword": "cuvinte cheie",
+    "category": "categorie",
+    "both": "cuvinte cheie + categorie",
+}
