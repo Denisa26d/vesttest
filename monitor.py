@@ -24,7 +24,13 @@ import requests
 import config
 
 SEEN_FILE = Path(__file__).parent / "seen.json"
-SEEN_RETENTION_DAYS = 30
+# An item can never be "eligible to resend" more than MAX_ITEM_AGE_HOURS
+# after publish (is_fresh() rejects it regardless of seen state), so
+# there's no benefit to keeping seen entries much longer than that. The
+# +24h buffer just guards against feed date weirdness or a gap in cron
+# runs, without letting the file grow unbounded like a flat 30-day window
+# would.
+SEEN_RETENTION_HOURS = config.MAX_ITEM_AGE_HOURS + 24
 BOT_STATE_FILE = Path(__file__).parent / "bot_state.json"
 REQUEST_TIMEOUT = 20
 FETCH_RETRIES = 2
@@ -108,7 +114,7 @@ def load_seen():
 
 
 def save_seen(seen):
-    cutoff = datetime.now(timezone.utc) - timedelta(days=SEEN_RETENTION_DAYS)
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=SEEN_RETENTION_HOURS)
     pruned = {
         k: v for k, v in seen.items()
         if datetime.fromisoformat(v) > cutoff
