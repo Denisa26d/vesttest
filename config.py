@@ -45,7 +45,7 @@ RSS_FEEDS = [
     {"name": "Digi24 (National)", "url": "https://digi24.ro/feed/"},
     {"name": "G4Media (National)", "url": "https://g4media.ro/feed/"},
     {"name": "HotNews (National)", "url": "https://hotnews.ro/feed/"},
-    {"name": "Adevarul (National)", "url": "https://adevarul.ro/feed/"},
+    {"name": "Adevarul (National)", "url": "https://adevarul.ro/rss/index"},
 ]
 
 # Google Alerts RSS feeds. Create one alert per county + incident-keyword query
