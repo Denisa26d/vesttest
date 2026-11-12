@@ -40,6 +40,12 @@ RSS_FEEDS = [
     # Caraș-Severin / Reșița
     {"name": "Știrile CS (Caraș-Severin)", "url": "https://stirilecs.ro/feed/"},
     {"name": "Reper24 (Caraș-Severin)", "url": "https://reper24.ro/feed/"},
+    #National
+    {"name": "Antena3 (National)", "url": "https://antena3.ro/feed/"},
+    {"name": "Digi24 (National)", "url": "https://digi24.ro/feed/"},
+    {"name": "G4Media (National)", "url": "https://g4media.ro/feed/"},
+    {"name": "HotNews (National)", "url": "https://hotnews.ro/feed/"},
+    {"name": "Adevarul (National)", "url": "https://adevarul.ro/feed/"},
 ]
 
 # Google Alerts RSS feeds. Create one alert per county + incident-keyword query
