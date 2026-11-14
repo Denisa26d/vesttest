@@ -29,17 +29,35 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      # seen.json / bot_state.json live on the `state` branch, which always
+      # holds exactly one commit (force-pushed each run). Before this,
+      # every run committed them to main — ~50k commits a year, and a
+      # `git pull` needed before every push of your own changes. If the
+      # branch doesn't exist yet (first run), the copies on main are used
+      # as the starting point.
+      - name: Restore state
+        run: |
+          if git fetch --depth=1 origin state 2>/dev/null; then
+            git checkout FETCH_HEAD -- seen.json bot_state.json
+          else
+            echo "No state branch yet, starting from the files on main."
+          fi
+
       - run: python monitor.py
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
-      - name: Commit updated state
+      - name: Save state
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
+          dir="$(mktemp -d)"
+          cp seen.json bot_state.json "$dir"/
+          cd "$dir"
+          git init -q -b state
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add seen.json bot_state.json
-          if ! git diff --cached --quiet; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git commit -m "Update seen items / bot state [skip ci]"
-            git push
-          fi
+          git commit -q -m "Bot state"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" state

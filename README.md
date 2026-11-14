@@ -1,21 +1,57 @@
 # Western Romania incident monitor
 
-Polls RSS feeds every 10 minutes for news in Timiș (primary focus), Hunedoara,
-Arad and Caraș-Severin, and posts new matches to a Telegram chat.
+Polls RSS feeds every 10 minutes and posts new articles to a Telegram chat:
+everything published by local outlets in Timiș (primary focus), Hunedoara,
+Arad and Caraș-Severin, plus everything from five national outlets.
 
-By default `config.SEND_ALL_ITEMS = True`, meaning it currently sends
-*everything* fresh from every source below (you filter by eye in Telegram).
-Set it to `False` to switch back to keyword-based filtering (accidents,
-fires, crime, drugs, border police, etc. — see `INCLUDE_KEYWORDS` /
-`EXCLUDE_KEYWORDS` in [config.py](config.py)).
+## How it decides what to send
+
+Every article is put in a group, and each group has its own mode, which you
+switch from the Telegram chat (`/all`, `/filtered`, `/status`, `/help`):
+
+| Article | Group |
+|---|---|
+| Names a town in one of the four counties (any outlet) | that county |
+| From a local outlet, names no town of ours | the outlet's county |
+| From a national outlet, names no town of ours | `national` |
+
+- `/all <group>` (the default): send every article in that group.
+- `/filtered <group>`: only incidents (accidents, fires, crime, drugs,
+  border police… see `INCLUDE_KEYWORDS` / `EXCLUDE_KEYWORDS` in
+  [config.py](config.py)). E.g. `/filtered national` keeps the national
+  outlets (~600-700 articles/day) down to incidents only.
+
+Other behaviour:
+
+- **Duplicates merge.** When several outlets report the same story (near-
+  identical headline, same county, within 3 hours), you get one message;
+  later outlets are added to it as `🔁 Și la:` links (an edit, so no extra
+  notification).
+- **County hashtags** (`#Timis`, `#Arad`, `#National` …) on every message;
+  tap one to see only that group.
+- **Dead feed warning.** If a feed fails 6 runs in a row (~1 hour) — error,
+  or it returns a web page instead of RSS — you get one warning, and another
+  message when it recovers. `/status` lists feeds that are down.
+- **New feeds start quiet.** The first time a feed is seen, its current
+  articles are marked as already sent; only articles published after that
+  are sent, so adding a feed doesn't flood the chat.
+- Ambiguous town names (`brad`, `vulcan`, `santana`, `faget`) only count
+  from that county's own outlets, so "Brad Pitt" isn't Hunedoara news.
 
 ## Sources
 
-15 local news RSS feeds across the four counties — Tion.ro, Opinia
-Timișoarei, Ziua de Vest, Express de Banat, Renașterea Bănățeană, Banat24,
-PressAlert, Timișoara Știri (Timiș); Servus Press (Hunedoara); Aradon, Arad24
-(Arad); Știrile CS, Reper24 (Caraș-Severin) — plus Google Alerts RSS, which
-you set up yourself (see below).
+Local: Tion.ro, Opinia Timișoarei, Ziua de Vest, Express de Banat,
+Renașterea Bănățeană, Banat24, PressAlert, Timișoara Știri, Sursa de Vest,
+Tribuna TM (Timiș); Servus Press, Știri din Hunedoara, Mesagerul Hunedorean
+(Hunedoara); Aradon, Arad24, Glasul Aradului (Arad); Știrile CS, Reper24
+(Caraș-Severin). National: Antena3, Digi24, G4Media, HotNews, Adevărul.
+Plus Google Alerts RSS, which you set up yourself (see below).
+
+To add a source, add it to `RSS_FEEDS` in [config.py](config.py) — with
+`"counties": [...]` for a local outlet or `"national": True` for a national
+one. Check the URL really returns RSS (open it in a browser: you should see
+XML, not the website); e.g. Digi24's `/feed/` silently redirects to the
+homepage, the real feed is `/rss`.
 
 **Not included:** ISU/IPJ social-media monitoring via Nitter/X (public
 Nitter mirrors are effectively dead as of mid-2026) and the ISU/IPJ county
@@ -34,9 +70,13 @@ GitHub API to trigger `workflow_dispatch` every 10 minutes. Execution still
 happens on GitHub Actions (free, no card) — only the "wake up on schedule"
 part moved elsewhere.
 
-`seen.json` is committed back to the repo by the workflow after each run
-(GitHub Actions runners are ephemeral, so this is how dedup state survives
-between runs).
+The bot's state — `seen.json` (already-sent articles) and `bot_state.json`
+(modes, feed health, recent stories for merging) — is saved after each run
+to the `state` branch, which always holds a single commit (force-pushed).
+GitHub Actions runners are ephemeral, so this is how it survives between
+runs, without adding a commit to `main` every 10 minutes. The copies of
+those files on `main` are only the starting point used if the `state`
+branch is ever missing.
 
 ## 1. Create a GitHub token for the trigger
 
@@ -96,13 +136,16 @@ never hardcode them in a file that gets committed.
 ## Tuning
 
 - Add/remove RSS sources in `RSS_FEEDS` in [config.py](config.py).
-- Toggle `SEND_ALL_ITEMS` to switch between "send everything" and
-  keyword-filtered mode.
+- Add towns to `COUNTY_GROUPS`; ambiguous ones to `AMBIGUOUS_PLACE_KEYWORDS`.
+- `SEND_ALL_ITEMS` is only the starting mode for a group with no `/all` or
+  `/filtered` set yet; use the Telegram commands to change modes.
 - Add/remove incident keywords in `INCLUDE_KEYWORDS` / `EXCLUDE_KEYWORDS`
-  (only used when `SEND_ALL_ITEMS = False`).
+  (only used for groups in `/filtered` mode).
+- `LOCAL_OUTLET_ASSUMES_COUNTY = False` to only send local-outlet articles
+  that name one of our towns.
+- `DEDUP_*` settings tune duplicate merging, `FEED_FAIL_ALERT_RUNS` the
+  dead-feed warning.
 - `MAX_ITEM_AGE_HOURS` controls the freshness window (currently 5).
-- `seen.json` tracks already-sent items (30-day retention) and is
-  committed back to the repo automatically by the workflow after each run.
 
 ## Alternative: running on your own always-on machine
 
@@ -124,6 +167,7 @@ I'll adjust the `.gitignore`/workflow accordingly.
   in [config.py](config.py) covers the most common neighboring counties
   (Sibiu, Bihor, etc.) for this.
 - A single feed occasionally fails for one run (site-side rate limiting,
-  transient timeout) — this is logged as `[warn]` and skipped, the rest of
-  the run continues normally. Only worth investigating if the *same* source
-  fails repeatedly across many runs.
+  transient timeout) — this is logged as `[warn]` and skipped. If the same
+  feed keeps failing for ~an hour, the bot tells you in Telegram.
+- Duplicate merging compares headlines only. Outlets that rewrite a story
+  with completely different wording still arrive as separate messages.

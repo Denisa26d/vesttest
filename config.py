@@ -12,40 +12,54 @@ monitor.py itself should not need to change.
 # starting default, not an override already in place.
 SEND_ALL_ITEMS = True
 
+# Pseudo-county for national-outlet articles that name none of our places.
+# Has its own /all or /filtered mode like a county.
+NATIONAL_GROUP = "national"
+
 # Plain local-news RSS feeds. Add more by finding "<site>/feed" or "<site>/feed/"
 # on any WordPress-based outlet (most Romanian local news sites are WordPress).
 RSS_FEEDS = [
+    # "counties" marks an outlet as local to those counties: its articles
+    # count for that county even when the headline doesn't name a town (see
+    # LOCAL_OUTLET_ASSUMES_COUNTY below). National outlets have no
+    # "counties" key, so their articles must name one of our places.
     # Timiș / Timișoara (primary focus)
-    {"name": "Tion.ro (Timiș)", "url": "https://www.tion.ro/feed/"},
-    {"name": "Opinia Timișoarei (Timiș)", "url": "https://www.opiniatimisoarei.ro/feed/"},
-    {"name": "Ziua de Vest (Timiș)", "url": "https://www.ziuadevest.ro/feed/"},
-    {"name": "Express de Banat (Timiș/Caraș-Severin)", "url": "https://expressdebanat.ro/feed/"},
-    {"name": "Renașterea Bănățeană (Timiș)", "url": "https://renasterea.ro/feed"},
-    {"name": "Banat24 (Timiș/Banat)", "url": "https://banat24.ro/feed"},
-    {"name": "PressAlert (Timiș)", "url": "https://www.pressalert.ro/feed"},
-    {"name": "Timișoara Știri (Timiș)", "url": "https://www.timisoarastiri.ro/feed"},
-    {"name": "Sursa de Vest (Timiș)", "url": "https://www.sursadevest.ro/feed"},
-    {"name": "Tribuna TM (Timiș)", "url": "https://tribunasnm.ro/feed"},
+    {"name": "Tion.ro (Timiș)", "url": "https://www.tion.ro/feed/", "counties": ["timis"]},
+    {"name": "Opinia Timișoarei (Timiș)", "url": "https://www.opiniatimisoarei.ro/feed/", "counties": ["timis"]},
+    {"name": "Ziua de Vest (Timiș)", "url": "https://www.ziuadevest.ro/feed/", "counties": ["timis"]},
+    {"name": "Express de Banat (Timiș/Caraș-Severin)", "url": "https://expressdebanat.ro/feed/",
+     "counties": ["timis", "caras-severin"]},
+    {"name": "Renașterea Bănățeană (Timiș)", "url": "https://renasterea.ro/feed", "counties": ["timis"]},
+    {"name": "Banat24 (Timiș/Banat)", "url": "https://banat24.ro/feed", "counties": ["timis"]},
+    {"name": "PressAlert (Timiș)", "url": "https://www.pressalert.ro/feed", "counties": ["timis"]},
+    {"name": "Timișoara Știri (Timiș)", "url": "https://www.timisoarastiri.ro/feed", "counties": ["timis"]},
+    {"name": "Sursa de Vest (Timiș)", "url": "https://www.sursadevest.ro/feed", "counties": ["timis"]},
+    {"name": "Tribuna TM (Timiș)", "url": "https://tribunasnm.ro/feed", "counties": ["timis"]},
     # NOTE: Vest24 and Știri pe Surse both block GitHub Actions' shared-runner
     # IPs (Cloudflare bot protection) with a 403, even though they work fine
     # from other IPs. Removed rather than fought — 12 other sources remain.
     # Hunedoara
-    {"name": "Servus Press (Hunedoara)", "url": "https://servuspress.ro/feed/"},
-    {"name": "Stiri din Hunedoara (Hunedoara)", "url": "https://stiridinhunedoara.ro/feed"},
-    {"name": "Mesagerul Hunedorean (Hunedoara)", "url": "https://www.mesagerulhunedorean.ro/feed"},
-    #Arad
-    {"name": "Aradon (Arad)", "url": "https://www.aradon.ro/feed"},
-    {"name": "Arad24 (Arad)", "url": "https://arad24.net/feed"},
-    {"name": "Glasul Aradului (Arad)", "url": "https://www.glsa.ro/feed"},
+    {"name": "Servus Press (Hunedoara)", "url": "https://servuspress.ro/feed/", "counties": ["hunedoara"]},
+    {"name": "Stiri din Hunedoara (Hunedoara)", "url": "https://stiridinhunedoara.ro/feed", "counties": ["hunedoara"]},
+    {"name": "Mesagerul Hunedorean (Hunedoara)", "url": "https://www.mesagerulhunedorean.ro/feed",
+     "counties": ["hunedoara"]},
+    # Arad
+    {"name": "Aradon (Arad)", "url": "https://www.aradon.ro/feed", "counties": ["arad"]},
+    {"name": "Arad24 (Arad)", "url": "https://arad24.net/feed", "counties": ["arad"]},
+    {"name": "Glasul Aradului (Arad)", "url": "https://www.glsa.ro/feed", "counties": ["arad"]},
     # Caraș-Severin / Reșița
-    {"name": "Știrile CS (Caraș-Severin)", "url": "https://stirilecs.ro/feed/"},
-    {"name": "Reper24 (Caraș-Severin)", "url": "https://reper24.ro/feed/"},
-    #National
-    {"name": "Antena3 (National)", "url": "https://antena3.ro/feed/"},
-    {"name": "Digi24 (National)", "url": "https://digi24.ro/feed/"},
-    {"name": "G4Media (National)", "url": "https://g4media.ro/feed/"},
-    {"name": "HotNews (National)", "url": "https://hotnews.ro/feed/"},
-    {"name": "Adevarul (National)", "url": "https://adevarul.ro/rss/index"},
+    {"name": "Știrile CS (Caraș-Severin)", "url": "https://stirilecs.ro/feed/", "counties": ["caras-severin"]},
+    {"name": "Reper24 (Caraș-Severin)", "url": "https://reper24.ro/feed/", "counties": ["caras-severin"]},
+    # National — "national": True means every article is sent, not only
+    # ones naming our places (together ~600-700 items/day). Articles that
+    # do name one of our counties are tagged and moded as that county;
+    # the rest fall under the "national" group, which /all national and
+    # /filtered national control like a county.
+    {"name": "Antena3 (National)", "url": "https://www.antena3.ro/rss", "national": True},
+    {"name": "Digi24 (National)", "url": "https://www.digi24.ro/rss", "national": True},
+    {"name": "G4Media (National)", "url": "https://www.g4media.ro/feed", "national": True},
+    {"name": "HotNews (National)", "url": "https://hotnews.ro/feed", "national": True},
+    {"name": "Adevarul (National)", "url": "https://adevarul.ro/rss/index", "national": True},
 ]
 
 # Google Alerts RSS feeds. Create one alert per county + incident-keyword query
@@ -149,12 +163,71 @@ CATEGORY_HINTS = ["eveniment"]
 # commands can target one county at a time — see COUNTY_ALIASES below for
 # the names accepted in those commands.
 COUNTY_GROUPS = {
-    "timis": ["timis", "timisoara"],
-    "hunedoara": ["hunedoara", "deva", "petrosani", "orastie", "hateg", "brad", "vulcan", "lupeni"],
-    "arad": ["arad", "ineu", "lipova", "santana", "curtici", "pecica", "nadlac", "chisineu-cris"],
-    "caras-severin": ["caras-severin", "caras severin", "resita", "oravita", "baile herculane",
-                       "otelu rosu", "moldova noua"],
+    "timis": ["timis", "timisoara", "lugoj", "sannicolau mare", "jimbolia", "buzias", "deta",
+              "gataia", "recas", "ciacova", "dumbravita", "giroc", "ghiroda", "mosnita",
+              "sacalaz", "sanandrei",
+              # inhabitants ("timișenii", "timișorenii" …)
+              "timisean", "timiseana", "timiseni", "timisenii", "timisene",
+              "timisorean", "timisoreana", "timisoreni", "timisorenii"],
+    "hunedoara": ["hunedoara", "deva", "petrosani", "orastie", "hateg", "lupeni", "simeria",
+                  "calan", "geoagiu", "uricani", "petrila", "aninoasa",
+                  # see AMBIGUOUS_PLACE_KEYWORDS for bare "brad"/"vulcan"
+                  "orasul brad", "municipiul brad", "orasul vulcan", "municipiul vulcan",
+                  "hunedorean", "hunedoreana", "hunedoreni", "hunedorenii"],
+    "arad": ["arad", "ineu", "lipova", "curtici", "pecica", "nadlac", "chisineu-cris",
+             "chisineu cris", "sebis", "pancota", "orasul santana",
+             "aradean", "aradeana", "aradeni", "aradenii"],
+    "caras-severin": ["caras-severin", "caras severin", "resita", "caransebes", "oravita",
+                      "baile herculane", "otelu rosu", "moldova noua", "bocsa", "anina",
+                      "resitean", "resiteana", "resiteni", "resitenii"],
 }
+
+# Town names that are also everyday words or famous names: "brad" (fir
+# tree, Brad Pitt), "vulcan" (volcano), "santana" (Carlos Santana),
+# "faget" (beech forest). These only count when the article comes from an
+# outlet local to that county — a national outlet's Christmas-tree story
+# shouldn't land in Hunedoara. Qualified forms like "orasul Brad" are in
+# COUNTY_GROUPS above and count from any outlet.
+AMBIGUOUS_PLACE_KEYWORDS = {
+    "timis": ["faget"],
+    "hunedoara": ["brad", "vulcan"],
+    "arad": ["santana"],
+}
+
+# If True, every article from an outlet with a "counties" entry in
+# RSS_FEEDS is in scope: one naming one of our towns is tagged with that
+# county, any other (no town named, or another county's) is tagged with
+# the outlet's own county. Together with national outlets' "national"
+# flag, this means /all sends everything every outlet publishes, while
+# /filtered still drops other counties' incidents (EXCLUDE_PLACE_KEYWORDS).
+# Set to False to only send local-outlet articles that name one of our
+# places.
+LOCAL_OUTLET_ASSUMES_COUNTY = True
+
+# Hashtag added to each Telegram message, so tapping it in the chat shows
+# only that county's news. Telegram hashtags can't contain "-".
+COUNTY_HASHTAGS = {
+    "timis": "Timis",
+    "hunedoara": "Hunedoara",
+    "arad": "Arad",
+    "caras-severin": "CarasSeverin",
+    NATIONAL_GROUP: "National",
+}
+
+# The same incident is usually reported by several outlets. Within this
+# many hours, an item whose headline is close enough to one already sent
+# is added as an extra link to the original Telegram message instead of
+# being sent again. "Close enough" = at least DEDUP_MIN_SHARED_WORDS
+# significant words in common, and those make up at least
+# DEDUP_MIN_OVERLAP of the shorter headline's words.
+DEDUP_WINDOW_HOURS = 3
+DEDUP_MIN_SHARED_WORDS = 3
+DEDUP_MIN_OVERLAP = 0.6
+
+# After this many runs in a row where a feed fails (error, or it returns a
+# web page instead of RSS), send one Telegram warning; another message
+# follows when it recovers. At one run per 10 minutes, 6 = about an hour.
+FEED_FAIL_ALERT_RUNS = 6
 
 # Names accepted after /all or /filtered in a Telegram command, mapped to
 # the COUNTY_GROUPS key they set. Diacritics/case don't matter (normalized
@@ -165,6 +238,7 @@ COUNTY_ALIASES = {
     "arad": "arad", "ar": "arad",
     "caras-severin": "caras-severin", "caras severin": "caras-severin",
     "cs": "caras-severin", "resita": "caras-severin",
+    "national": NATIONAL_GROUP, "nationale": NATIONAL_GROUP, "nat": NATIONAL_GROUP,
 }
 
 # Proper display names (with diacritics) for bot replies.
@@ -173,6 +247,7 @@ COUNTY_DISPLAY_NAMES = {
     "hunedoara": "Hunedoara",
     "arad": "Arad",
     "caras-severin": "Caraș-Severin",
+    NATIONAL_GROUP: "Național",
 }
 
 # When a county is in filtered mode, this controls which signal(s) count as
