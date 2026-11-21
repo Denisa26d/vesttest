@@ -1,0 +1,984 @@
+{
+  "baselined_feeds": [
+    "Tion.ro (Timiș)",
+    "Opinia Timișoarei (Timiș)",
+    "Ziua de Vest (Timiș)",
+    "Express de Banat (Timiș/Caraș-Severin)",
+    "Renașterea Bănățeană (Timiș)",
+    "Banat24 (Timiș/Banat)",
+    "PressAlert (Timiș)",
+    "Timișoara Știri (Timiș)",
+    "Sursa de Vest (Timiș)",
+    "Tribuna TM (Timiș)",
+    "Servus Press (Hunedoara)",
+    "Stiri din Hunedoara (Hunedoara)",
+    "Mesagerul Hunedorean (Hunedoara)",
+    "Aradon (Arad)",
+    "Arad24 (Arad)",
+    "Glasul Aradului (Arad)",
+    "Știrile CS (Caraș-Severin)",
+    "Reper24 (Caraș-Severin)",
+    "Antena3 (National)",
+    "Digi24 (National)",
+    "G4Media (National)",
+    "HotNews (National)",
+    "Adevarul (National)"
+  ],
+  "county_modes": {
+    "arad": "all",
+    "caras-severin": "all",
+    "hunedoara": "all",
+    "national": "both",
+    "timis": "all"
+  },
+  "feed_health": {
+    "Renașterea Bănățeană (Timiș)": {
+      "alerted": true,
+      "fails": 2000,
+      "last_error": "403 Client Error: Forbidden for url: https://renasterea.ro/feed"
+    }
+  },
+  "recent_stories": [
+    {
+      "extras": [],
+      "groups": [
+        "arad"
+      ],
+      "message_id": 17781,
+      "sent_at": "2026-11-21T09:45:36.606516+00:00",
+      "sources": [
+        "Ziua de Vest (Timiș)"
+      ],
+      "text": "📰 <b>Accident mortal în centrul Aradului. Un bărbat a fost prins sub țevile de termoficare în timpul descărcării acestora</b>\n📍 Ziua de Vest (Timiș)\nhttps://www.ziuadevest.ro/accident-mortal-in-centrul-aradului-un-barbat-a-fost-prins-sub-tevile-de-termoficare-in-timpul-descarcarii-acestora/\n#Arad",
+      "title": "Accident mortal în centrul Aradului. Un bărbat a fost prins sub țevile de termoficare în timpul descărcării acestora",
+      "tokens": [
+        "accid",
+        "acest",
+        "aradu",
+        "barba",
+        "centr",
+        "desca",
+        "morta",
+        "prins",
+        "termo",
+        "tevil",
+        "timpu"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "arad"
+      ],
+      "message_id": 17782,
+      "sent_at": "2026-11-21T09:45:36.606516+00:00",
+      "sources": [
+        "Aradon (Arad)"
+      ],
+      "text": "📰 <b>Se completează echipa managerială a Spitalului Județean: posturile de director medical și director de îngrijiri, scoase la concurs</b>\n📍 Aradon (Arad)\nhttps://www.aradon.ro/aradon-stirile-judetului-arad/se-completeaza-echipa-manageriala-a-spitalului-judetean-posturile-de-director-medical-si-director-de-ingrijiri-scoase-la-concurs-2274735/?utm_source=rss&amp;utm_medium=referral&amp;utm_campaign=hiraggregator\n#Arad",
+      "title": "Se completează echipa managerială a Spitalului Județean: posturile de director medical și director de îngrijiri, scoase la concurs",
+      "tokens": [
+        "compl",
+        "concu",
+        "direc",
+        "echip",
+        "ingri",
+        "judet",
+        "manag",
+        "medic",
+        "postu",
+        "scoas",
+        "spita"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17783,
+      "sent_at": "2026-11-21T09:55:26.891342+00:00",
+      "sources": [
+        "Tion.ro (Timiș)"
+      ],
+      "text": "📰 <b>Noi lucrări, noi restricții de circulație, de săptămâna viitoare, la Timișoara</b>\n📍 Tion.ro (Timiș)\nhttps://www.tion.ro/stirile-judetului-timis/noi-lucrari-noi-restrictii-de-circulatie-de-saptamana-viitoare-la-timisoara-2393595/?utm_source=rss&amp;utm_medium=referral&amp;utm_campaign=hiraggregator\n#Timis",
+      "title": "Noi lucrări, noi restricții de circulație, de săptămâna viitoare, la Timișoara",
+      "tokens": [
+        "circu",
+        "lucra",
+        "restr",
+        "sapta",
+        "timis",
+        "viito"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "caras-severin"
+      ],
+      "message_id": 17784,
+      "sent_at": "2026-11-21T10:00:59.443850+00:00",
+      "sources": [
+        "Express de Banat (Timiș/Caraș-Severin)"
+      ],
+      "text": "📰 <b>La final de lună, locuitorii din Moldova Nouă pot scăpa de obiectele vechi din gospodării</b>\n📍 Express de Banat (Timiș/Caraș-Severin)\nhttps://expressdebanat.ro/la-final-de-luna-locuitorii-din-moldova-noua-pot-scapa-de-obiectele-vechi-din-gospodarii/\n#CarasSeverin",
+      "title": "La final de lună, locuitorii din Moldova Nouă pot scăpa de obiectele vechi din gospodării",
+      "tokens": [
+        "final",
+        "gospo",
+        "locui",
+        "luna",
+        "moldo",
+        "obiec",
+        "scapa",
+        "vechi"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "hunedoara"
+      ],
+      "message_id": 17785,
+      "sent_at": "2026-11-21T10:00:59.443850+00:00",
+      "sources": [
+        "Servus Press (Hunedoara)"
+      ],
+      "text": "📰 <b>Orăștie sărbătorește Ziua Națională a României cu muzică populară, tradiții și aprinderea iluminatului festiv. Veta Biriș, printre invitați</b>\n📍 Servus Press (Hunedoara)\nhttps://servuspress.ro/orastie-sarbatoreste-ziua-nationala-a-romaniei-cu-muzica-populara-traditii-si-aprinderea-iluminatului-festiv-veta-biris-printre-invitati_352251.html\n#Hunedoara",
+      "title": "Orăștie sărbătorește Ziua Națională a României cu muzică populară, tradiții și aprinderea iluminatului festiv. Veta Biriș, printre invitați",
+      "tokens": [
+        "aprin",
+        "biris",
+        "festi",
+        "ilumi",
+        "invit",
+        "muzic",
+        "natio",
+        "orast",
+        "popul",
+        "print",
+        "roman",
+        "sarba",
+        "tradi",
+        "veta",
+        "ziua"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17786,
+      "sent_at": "2026-11-21T10:05:38.920141+00:00",
+      "sources": [
+        "Sursa de Vest (Timiș)"
+      ],
+      "text": "📰 <b>Antibioticele administrate inutil în cazul infecțiilor respiratorii la copii cresc riscul apariției bacteriilor rezistente la tratament! Avertismentul medicilor de la Spitalul Județean Timișoara</b>\n📍 Sursa de Vest (Timiș)\nhttps://www.sursadevest.ro/antibioticele-administrate-inutil-in-cazul-infectiilor-respiratorii-la-copii-cresc-riscul-aparitiei-bacteriilor-rezistente-la-tratament-avertismentul-medicilor-de-la-spitalul-judetean-timisoara/\n#Timis",
+      "title": "Antibioticele administrate inutil în cazul infecțiilor respiratorii la copii cresc riscul apariției bacteriilor rezistente la tratament! Avertismentul medicilor de la Spitalul Județean Timișoara",
+      "tokens": [
+        "admin",
+        "antib",
+        "apari",
+        "avert",
+        "bacte",
+        "cazul",
+        "copii",
+        "cresc",
+        "infec",
+        "inuti",
+        "judet",
+        "medic",
+        "respi",
+        "rezis",
+        "riscu",
+        "spita",
+        "timis",
+        "trata"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 17787,
+      "sent_at": "2026-11-21T10:10:34.218917+00:00",
+      "sources": [
+        "Antena3 (National)"
+      ],
+      "text": "🚨 <b>Cel puţin 4 morţi şi 35 de răniţi după o explozie la una dintre cele mai mari termocentrale din Irak. Centrala a fost oprită</b>\n📍 Antena3 (National)\nhttps://www.antena3.ro/externe/cel-putin-4-morti-si-35-de-raniti-dupa-o-explozie-la-una-dintre-cele-mai-mari-termocentrale-din-irak-centrala-a-fost-oprita-812055.html\n#National",
+      "title": "Cel puţin 4 morţi şi 35 de răniţi după o explozie la una dintre cele mai mari termocentrale din Irak. Centrala a fost oprită",
+      "tokens": [
+        "centr",
+        "explo",
+        "irak",
+        "morti",
+        "oprit",
+        "putin",
+        "ranit",
+        "termo"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 17788,
+      "sent_at": "2026-11-21T10:15:32.848563+00:00",
+      "sources": [
+        "Adevarul (National)"
+      ],
+      "text": "🚨 <b>Adolescenta de 17 ani ucisă de o mașină de gunoi în București ar fi fost târâtă 100 de metri. Șoferul spune că n-a simțit impactul</b>\n📍 Adevarul (National)\nhttps://adevarul.ro/stiri-locale/bucuresti/adolescenta-de-17-ani-ucisa-de-o-masina-de-gunoi-2573296.html\n#National",
+      "title": "Adolescenta de 17 ani ucisă de o mașină de gunoi în București ar fi fost târâtă 100 de metri. Șoferul spune că n-a simțit impactul",
+      "tokens": [
+        "adole",
+        "bucur",
+        "gunoi",
+        "impac",
+        "masin",
+        "metri",
+        "simti",
+        "sofer",
+        "spune",
+        "tarat",
+        "ucisa"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "hunedoara"
+      ],
+      "message_id": 17789,
+      "sent_at": "2026-11-21T10:20:37.238246+00:00",
+      "sources": [
+        "Mesagerul Hunedorean (Hunedoara)"
+      ],
+      "text": "📰 <b>PREMIERĂ ÎN ADMINISTRAȚIE: PATRU JUDEȚE, UN SINGUR PROIECT PENTRU ENERGIE VERDE</b>\n📍 Mesagerul Hunedorean (Hunedoara)\nhttps://www.mesagerulhunedorean.ro/premiera-in-administratie-patru-judete-un-singur-proiect-pentru-energie-verde/\n#Hunedoara",
+      "title": "PREMIERĂ ÎN ADMINISTRAȚIE: PATRU JUDEȚE, UN SINGUR PROIECT PENTRU ENERGIE VERDE",
+      "tokens": [
+        "admin",
+        "energ",
+        "judet",
+        "patru",
+        "premi",
+        "proie",
+        "singu",
+        "verde"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "arad"
+      ],
+      "message_id": 17790,
+      "sent_at": "2026-11-21T10:20:37.238246+00:00",
+      "sources": [
+        "Aradon (Arad)"
+      ],
+      "text": "📰 <b>Ministrul Afacerilor Externe: Atacuri în Marea Neagră, rachete deasupra Poloniei și o tentativă de asasinat în Danemarca-apropie și mai mult aliații NATO</b>\n📍 Aradon (Arad)\nhttps://www.aradon.ro/romania/ministrul-afacerilor-externe-atacuri-in-marea-neagra-rachete-deasupra-poloniei-si-o-tentativa-de-asasinat-in-danemarca-apropie-si-mai-mult-aliatii-nato-2274747/?utm_source=rss&amp;utm_medium=referral&amp;utm_campaign=hiraggregator\n#Arad",
+      "title": "Ministrul Afacerilor Externe: Atacuri în Marea Neagră, rachete deasupra Poloniei și o tentativă de asasinat în Danemarca-apropie și mai mult aliații NATO",
+      "tokens": [
+        "aface",
+        "aliat",
+        "aprop",
+        "asasi",
+        "atacu",
+        "danem",
+        "deasu",
+        "exter",
+        "marea",
+        "minis",
+        "nato",
+        "neagr",
+        "polon",
+        "rache",
+        "tenta"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 17791,
+      "sent_at": "2026-11-21T10:20:37.238246+00:00",
+      "sources": [
+        "Digi24 (National)"
+      ],
+      "text": "🚨 <b>O tânără a coborât cu forța dintr-o mașină și a cerut disperată ajutor, în Cluj-Napoca. Imaginile, surprinse de o cameră de bord</b>\n📍 Digi24 (National)\nhttps://www.digi24.ro/stiri/actualitate/o-tanara-a-coborat-cu-forta-dintr-o-masina-si-a-cerut-disperata-ajutor-in-cluj-napoca-imaginile-surprinse-de-o-camera-de-bord-4047017\n#National",
+      "title": "O tânără a coborât cu forța dintr-o mașină și a cerut disperată ajutor, în Cluj-Napoca. Imaginile, surprinse de o cameră de bord",
+      "tokens": [
+        "ajuto",
+        "bord",
+        "camer",
+        "cerut",
+        "cluj",
+        "cobor",
+        "dintr",
+        "dispe",
+        "forta",
+        "imagi",
+        "masin",
+        "napoc",
+        "surpr",
+        "tanar"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "arad"
+      ],
+      "message_id": 17792,
+      "sent_at": "2026-11-21T10:30:45.455478+00:00",
+      "sources": [
+        "Aradon (Arad)"
+      ],
+      "text": "📰 <b>Ursula Von der Leyen condamnă tentativa de asasinare a unui cetăţean americano-ucrainean în Danemarca, atribuită Rusiei</b>\n📍 Aradon (Arad)\nhttps://www.aradon.ro/mapamond/ursula-von-der-leyen-condamna-tentativa-de-asasinare-a-unui-cetatean-americano-ucrainean-in-danemarca-atribuita-rusiei-2274759/?utm_source=rss&amp;utm_medium=referral&amp;utm_campaign=hiraggregator\n#Arad",
+      "title": "Ursula Von der Leyen condamnă tentativa de asasinare a unui cetăţean americano-ucrainean în Danemarca, atribuită Rusiei",
+      "tokens": [
+        "ameri",
+        "asasi",
+        "atrib",
+        "cetat",
+        "conda",
+        "danem",
+        "leyen",
+        "rusie",
+        "tenta",
+        "ucrai",
+        "ursul"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 17793,
+      "sent_at": "2026-11-21T10:35:29.536077+00:00",
+      "sources": [
+        "Digi24 (National)"
+      ],
+      "text": "🚨 <b>Scandal în Italia: Cum a ajuns „Rechinul” Poliției să fie acuzat că a ascuns probe în dosarul asasinării judecătorului Paolo Borsellino</b>\n📍 Digi24 (National)\nhttps://www.digi24.ro/stiri/externe/mapamond/scandalul-borsellino-cum-a-ajuns-rechinul-politiei-italiene-sa-fie-acuzat-ca-a-ascuns-probe-intr-un-caz-cosa-nostra-4042013\n#National",
+      "title": "Scandal în Italia: Cum a ajuns „Rechinul” Poliției să fie acuzat că a ascuns probe în dosarul asasinării judecătorului Paolo Borsellino",
+      "tokens": [
+        "acuza",
+        "ajuns",
+        "asasi",
+        "ascun",
+        "borse",
+        "dosar",
+        "itali",
+        "judec",
+        "paolo",
+        "polit",
+        "probe",
+        "rechi",
+        "scand"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 17794,
+      "sent_at": "2026-11-21T10:35:29.536077+00:00",
+      "sources": [
+        "G4Media (National)"
+      ],
+      "text": "🚨 <b>Cinci state UE vor să trimită migranți respinși în Rwanda din 2027</b>\n📍 G4Media (National)\nhttps://www.g4media.ro/cinci-state-ue-vor-sa-trimita-migranti-respinsi-in-rwanda-din-2027.html\n#National",
+      "title": "Cinci state UE vor să trimită migranți respinși în Rwanda din 2027",
+      "tokens": [
+        "2027",
+        "cinci",
+        "migra",
+        "respi",
+        "rwand",
+        "state",
+        "trimi"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "arad"
+      ],
+      "message_id": 17795,
+      "sent_at": "2026-11-21T10:45:34.749317+00:00",
+      "sources": [
+        "Aradon (Arad)"
+      ],
+      "text": "📰 <b>Record de vânzări pentru GTA VI în prima zi de la lansare, 3,79 miliarde de dolari</b>\n📍 Aradon (Arad)\nhttps://www.aradon.ro/mapamond/record-de-vanzari-pentru-gta-vi-in-prima-zi-de-la-lansare-379-miliarde-de-dolari-2274771/?utm_source=rss&amp;utm_medium=referral&amp;utm_campaign=hiraggregator\n#Arad",
+      "title": "Record de vânzări pentru GTA VI în prima zi de la lansare, 3,79 miliarde de dolari",
+      "tokens": [
+        "dolar",
+        "lansa",
+        "milia",
+        "prima",
+        "recor",
+        "vanza"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 17796,
+      "sent_at": "2026-11-21T10:45:34.749317+00:00",
+      "sources": [
+        "Digi24 (National)"
+      ],
+      "text": "🚨 <b>Gianni De Gennaro, faimos fost șef al poliției italiene, s-a sinucis: era anchetat într-un dosar despre asasinarea lui Paolo Borsellino</b>\n📍 Digi24 (National)\nhttps://www.digi24.ro/stiri/externe/mapamond/gianni-de-gennaro-faimos-fost-sef-al-politiei-italiene-s-a-sinucis-era-anchetat-intr-un-dosar-despre-asasinarea-lui-paolo-borsellino-4047045\n#National",
+      "title": "Gianni De Gennaro, faimos fost șef al poliției italiene, s-a sinucis: era anchetat într-un dosar despre asasinarea lui Paolo Borsellino",
+      "tokens": [
+        "anche",
+        "asasi",
+        "borse",
+        "dosar",
+        "faimo",
+        "genna",
+        "giann",
+        "itali",
+        "paolo",
+        "polit",
+        "sinuc"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17797,
+      "sent_at": "2026-11-21T10:50:38.874685+00:00",
+      "sources": [
+        "Tribuna TM (Timiș)"
+      ],
+      "text": "📰 <b>Copil de 16 ani din Timiș, încătușat de polițiști. A furat două trotinete electrice</b>\n📍 Tribuna TM (Timiș)\nhttps://tribunasnm.ro/2026/11/21/copil-de-16-ani-din-timis-incatusat-de-politisti-a-furat-doua-trotinete-electrice/\n#Timis",
+      "title": "Copil de 16 ani din Timiș, încătușat de polițiști. A furat două trotinete electrice",
+      "tokens": [
+        "copil",
+        "elect",
+        "furat",
+        "incat",
+        "polit",
+        "timis",
+        "troti"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "arad"
+      ],
+      "message_id": 17798,
+      "sent_at": "2026-11-21T10:55:27.137126+00:00",
+      "sources": [
+        "Aradon (Arad)"
+      ],
+      "text": "📰 <b>Hegseth restricționează legăturile militare cu Canada</b>\n📍 Aradon (Arad)\nhttps://www.aradon.ro/mapamond/hegseth-restrictioneaza-legaturile-militare-cu-canada-2274783/?utm_source=rss&amp;utm_medium=referral&amp;utm_campaign=hiraggregator\n#Arad",
+      "title": "Hegseth restricționează legăturile militare cu Canada",
+      "tokens": [
+        "canad",
+        "hegse",
+        "legat",
+        "milit",
+        "restr"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "caras-severin"
+      ],
+      "message_id": 17799,
+      "sent_at": "2026-11-21T11:05:30.426133+00:00",
+      "sources": [
+        "Reper24 (Caraș-Severin)"
+      ],
+      "text": "📰 <b>Parcul din zona Intim va fi modernizat cu peste 13 milioane de lei</b>\n📍 Reper24 (Caraș-Severin)\nhttps://reper24.ro/parcul-din-zona-intim-va-fi-modernizat-cu-peste-13-milioane-de-lei/\n#CarasSeverin",
+      "title": "Parcul din zona Intim va fi modernizat cu peste 13 milioane de lei",
+      "tokens": [
+        "intim",
+        "milio",
+        "moder",
+        "parcu",
+        "zona"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17800,
+      "sent_at": "2026-11-21T11:10:38.777367+00:00",
+      "sources": [
+        "Opinia Timișoarei (Timiș)"
+      ],
+      "text": "📰 <b>În sfârșit, a venit prima victorie. Dumbrăvița învinge Afumațiul, dar termină meciul în 10 jucători</b>\n📍 Opinia Timișoarei (Timiș)\nhttps://www.opiniatimisoarei.ro/in-sfarsit-a-venit-prima-victorie-dumbravita-invinge-afumatiul-dar-termina-meciul-in-10-jucatori/21/11/2026\n#Timis",
+      "title": "În sfârșit, a venit prima victorie. Dumbrăvița învinge Afumațiul, dar termină meciul în 10 jucători",
+      "tokens": [
+        "afuma",
+        "dumbr",
+        "invin",
+        "jucat",
+        "meciu",
+        "prima",
+        "sfars",
+        "termi",
+        "venit",
+        "victo"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "caras-severin"
+      ],
+      "message_id": 17801,
+      "sent_at": "2026-11-21T11:10:38.777367+00:00",
+      "sources": [
+        "Express de Banat (Timiș/Caraș-Severin)"
+      ],
+      "text": "📰 <b>Hurduzeu: Camera de Comerț a Caraș-Severinului există doar pe hârtie! Nu am cu cine vorbi!</b>\n📍 Express de Banat (Timiș/Caraș-Severin)\nhttps://expressdebanat.ro/hurduzeu-camera-de-comert-a-caras-severinului-exista-doar-pe-hartie-nu-am-cu-cine-vorbi/\n#CarasSeverin",
+      "title": "Hurduzeu: Camera de Comerț a Caraș-Severinului există doar pe hârtie! Nu am cu cine vorbi!",
+      "tokens": [
+        "camer",
+        "caras",
+        "comer",
+        "exist",
+        "harti",
+        "hurdu",
+        "sever",
+        "vorbi"
+      ]
+    },
+    {
+      "extras": [
+        [
+          "Aradon (Arad)",
+          "https://www.aradon.ro/aradon-stirile-judetului-arad/tanara-lovita-pe-trotuar-in-fata-cimitirului-uta-2274798/?utm_source=rss&utm_medium=referral&utm_campaign=hiraggregator"
+        ]
+      ],
+      "groups": [
+        "arad"
+      ],
+      "message_id": 17802,
+      "sent_at": "2026-11-21T11:10:38.777367+00:00",
+      "sources": [
+        "Glasul Aradului (Arad)",
+        "Aradon (Arad)"
+      ],
+      "text": "📰 <b>Un șofer a pierdut controlul volanului în fața cimitirului UTA și a accidentat grav o tânără de 26 de ani</b>\n📍 Glasul Aradului (Arad)\nhttps://www.glsa.ro/un-sofer-a-pierdut-controlul-volanului-in-fata-cimitirului-uta-si-a-accidentat-grav-o-tanara-de-26-de-ani/\n#Arad",
+      "title": "Un șofer a pierdut controlul volanului în fața cimitirului UTA și a accidentat grav o tânără de 26 de ani",
+      "tokens": [
+        "accid",
+        "cimit",
+        "contr",
+        "fata",
+        "grav",
+        "pierd",
+        "sofer",
+        "tanar",
+        "volan"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17803,
+      "sent_at": "2026-11-21T11:15:36.017941+00:00",
+      "sources": [
+        "Tion.ro (Timiș)"
+      ],
+      "text": "📰 <b>Minor de 16 ani, reținut după ce a furat două trotinete electrice dintr-o gospodărie din Timiș</b>\n📍 Tion.ro (Timiș)\nhttps://www.tion.ro/eveniment/minor-de-16-ani-retinut-dupa-ce-a-furat-doua-trotinete-electrice-dintr-o-gospodarie-din-timis-2393619/?utm_source=rss&amp;utm_medium=referral&amp;utm_campaign=hiraggregator\n#Timis",
+      "title": "Minor de 16 ani, reținut după ce a furat două trotinete electrice dintr-o gospodărie din Timiș",
+      "tokens": [
+        "dintr",
+        "elect",
+        "furat",
+        "gospo",
+        "minor",
+        "retin",
+        "timis",
+        "troti"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17804,
+      "sent_at": "2026-11-21T11:15:36.017941+00:00",
+      "sources": [
+        "Tribuna TM (Timiș)"
+      ],
+      "text": "📰 <b>Victorie dramatică pentru Dumbrăvița! Gunie a dat lovitura în prelungiri și a adus primul succes al sezonului</b>\n📍 Tribuna TM (Timiș)\nhttps://tribunasnm.ro/2026/11/21/victorie-dramatica-pentru-dumbravita-gunie-a-dat-lovitura-in-prelungiri-si-a-adus-primul-succes-al-sezonului/\n#Timis",
+      "title": "Victorie dramatică pentru Dumbrăvița! Gunie a dat lovitura în prelungiri și a adus primul succes al sezonului",
+      "tokens": [
+        "adus",
+        "drama",
+        "dumbr",
+        "gunie",
+        "lovit",
+        "prelu",
+        "primu",
+        "sezon",
+        "succe",
+        "victo"
+      ]
+    },
+    {
+      "extras": [
+        [
+          "Tribuna TM (Timiș)",
+          "https://tribunasnm.ro/2026/11/21/barbat-beat-si-fara-permis-depistat-la-volanul-unei-masini-intr-un-oras-din-timis/"
+        ],
+        [
+          "PressAlert (Timiș)",
+          "https://www.pressalert.ro/2026/11/prins-beat-crita-si-fara-permis-la-volan-in-miez-de-noapte-un-barbat-din-timis-a-fost-retinut-de-politisti/"
+        ]
+      ],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17805,
+      "sent_at": "2026-11-21T11:40:37.763721+00:00",
+      "sources": [
+        "Tion.ro (Timiș)",
+        "Tribuna TM (Timiș)",
+        "PressAlert (Timiș)"
+      ],
+      "text": "📰 <b>Bărbat prins la volan beat și fără permis, la Lugoj</b>\n📍 Tion.ro (Timiș)\nhttps://www.tion.ro/eveniment/barbat-prins-la-volan-beat-si-fara-permis-la-lugoj-2393631/?utm_source=rss&amp;utm_medium=referral&amp;utm_campaign=hiraggregator\n#Timis",
+      "title": "Bărbat prins la volan beat și fără permis, la Lugoj",
+      "tokens": [
+        "barba",
+        "beat",
+        "lugoj",
+        "permi",
+        "prins",
+        "volan"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17806,
+      "sent_at": "2026-11-21T11:40:37.763721+00:00",
+      "sources": [
+        "Opinia Timișoarei (Timiș)"
+      ],
+      "text": "📰 <b>Lovitură dată nu departe de Timișoara. Hoțul are numai 16 ani</b>\n📍 Opinia Timișoarei (Timiș)\nhttps://www.opiniatimisoarei.ro/lovitura-data-nu-departe-de-timisoara-hotul-are-numai-16-ani/21/11/2026\n#Timis",
+      "title": "Lovitură dată nu departe de Timișoara. Hoțul are numai 16 ani",
+      "tokens": [
+        "data",
+        "depar",
+        "hotul",
+        "lovit",
+        "numai",
+        "timis"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17807,
+      "sent_at": "2026-11-21T11:55:30.637959+00:00",
+      "sources": [
+        "Opinia Timișoarei (Timiș)"
+      ],
+      "text": "📰 <b>Șofer beat oprit în trafic, în Timiș. N-a fost singura surpriză pentru polițiști</b>\n📍 Opinia Timișoarei (Timiș)\nhttps://www.opiniatimisoarei.ro/sofer-beat-oprit-in-trafic-in-timis-n-a-fost-singura-surpriza-pentru-politisti/21/11/2026\n#Timis",
+      "title": "Șofer beat oprit în trafic, în Timiș. N-a fost singura surpriză pentru polițiști",
+      "tokens": [
+        "beat",
+        "oprit",
+        "polit",
+        "singu",
+        "sofer",
+        "surpr",
+        "timis",
+        "trafi"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17808,
+      "sent_at": "2026-11-21T12:01:03.453736+00:00",
+      "sources": [
+        "Sursa de Vest (Timiș)"
+      ],
+      "text": "📰 <b>„Litoralul Vestului” se transformă radical! Investiție de aproape 5 milioane de euro pentru o zonă de agrement modernă!</b>\n📍 Sursa de Vest (Timiș)\nhttps://www.sursadevest.ro/litoralul-vestului-se-transforma-radical-investitie-de-aproape-5-milioane-de-euro-pentru-o-zona-de-agrement-moderna/\n#Timis",
+      "title": "„Litoralul Vestului” se transformă radical! Investiție de aproape 5 milioane de euro pentru o zonă de agrement modernă!",
+      "tokens": [
+        "agrem",
+        "aproa",
+        "euro",
+        "inves",
+        "litor",
+        "milio",
+        "moder",
+        "radic",
+        "trans",
+        "vestu",
+        "zona"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "hunedoara"
+      ],
+      "message_id": 17809,
+      "sent_at": "2026-11-21T12:01:03.453736+00:00",
+      "sources": [
+        "Servus Press (Hunedoara)"
+      ],
+      "text": "📰 <b>Lucrări de refacere a habitatului forestier pe Valea Streiului. Intervențiile vor continua și în 2027</b>\n📍 Servus Press (Hunedoara)\nhttps://servuspress.ro/lucrari-de-refacere-a-habitatului-forestier-pe-valea-streiului-interventiile-vor-continua-si-in-2027_352294.html\n#Hunedoara",
+      "title": "Lucrări de refacere a habitatului forestier pe Valea Streiului. Intervențiile vor continua și în 2027",
+      "tokens": [
+        "2027",
+        "conti",
+        "fores",
+        "habit",
+        "inter",
+        "lucra",
+        "refac",
+        "strei",
+        "valea"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17810,
+      "sent_at": "2026-11-21T12:20:44.147881+00:00",
+      "sources": [
+        "Opinia Timișoarei (Timiș)"
+      ],
+      "text": "📰 <b>Politehnica Timișoara învinsă de Rapid în Superliga fetelor. Bănățencele vor încheia sezonul regular pe terenul campioanei</b>\n📍 Opinia Timișoarei (Timiș)\nhttps://www.opiniatimisoarei.ro/politehnica-timisoara-invinsa-de-rapid-in-superliga-fetelor-banatencele-vor-incheia-sezonul-regular-pe-terenul-campioanei/21/11/2026\n#Timis",
+      "title": "Politehnica Timișoara învinsă de Rapid în Superliga fetelor. Bănățencele vor încheia sezonul regular pe terenul campioanei",
+      "tokens": [
+        "banat",
+        "campi",
+        "fetel",
+        "inche",
+        "invin",
+        "polit",
+        "rapid",
+        "regul",
+        "sezon",
+        "super",
+        "teren",
+        "timis"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17811,
+      "sent_at": "2026-11-21T12:20:44.147881+00:00",
+      "sources": [
+        "Sursa de Vest (Timiș)"
+      ],
+      "text": "📰 <b>Viena și Praga, în topul preferințelor românilor pentru minivacanța de 1 Decembrie! Târgurile de Crăciun atrag turiștii!</b>\n📍 Sursa de Vest (Timiș)\nhttps://www.sursadevest.ro/viena-si-praga-in-topul-preferintelor-romanilor-pentru-minivacanta-de-1-decembrie-targurile-de-craciun-atrag-turistii/\n#Timis",
+      "title": "Viena și Praga, în topul preferințelor românilor pentru minivacanța de 1 Decembrie! Târgurile de Crăciun atrag turiștii!",
+      "tokens": [
+        "atrag",
+        "craci",
+        "decem",
+        "miniv",
+        "praga",
+        "prefe",
+        "roman",
+        "targu",
+        "topul",
+        "turis",
+        "viena"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 17812,
+      "sent_at": "2026-11-21T12:25:29.366400+00:00",
+      "sources": [
+        "Digi24 (National)"
+      ],
+      "text": "🚨 <b>Vapor care se îndrepta spre Kaliningrad, lovit de drone: nava a luat foc și a ajuns în derivă în Golful Finlandei</b>\n📍 Digi24 (National)\nhttps://www.digi24.ro/stiri/externe/vapor-care-se-indrepta-spre-kaliningrad-lovit-de-drone-nava-a-luat-foc-si-a-ajuns-in-deriva-in-golful-finlandei-4047115\n#National",
+      "title": "Vapor care se îndrepta spre Kaliningrad, lovit de drone: nava a luat foc și a ajuns în derivă în Golful Finlandei",
+      "tokens": [
+        "ajuns",
+        "deriv",
+        "drone",
+        "finla",
+        "golfu",
+        "indre",
+        "kalin",
+        "lovit",
+        "luat",
+        "nava",
+        "vapor"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 17813,
+      "sent_at": "2026-11-21T12:25:29.366400+00:00",
+      "sources": [
+        "Adevarul (National)"
+      ],
+      "text": "🚨 <b>Andy Byron, fostul CEO surprins pe „kiss-cam” la Coldplay, revine într-o funcție de conducere la 16 luni după scandal</b>\n📍 Adevarul (National)\nhttps://adevarul.ro/showbiz/vedete/andy-byron-fostul-ceo-surprins-pe-kiss-cam-la-2573315.html\n#National",
+      "title": "Andy Byron, fostul CEO surprins pe „kiss-cam” la Coldplay, revine într-o funcție de conducere la 16 luni după scandal",
+      "tokens": [
+        "andy",
+        "byron",
+        "coldp",
+        "condu",
+        "fostu",
+        "funct",
+        "kiss",
+        "luni",
+        "revin",
+        "scand",
+        "surpr"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17814,
+      "sent_at": "2026-11-21T12:30:52.617258+00:00",
+      "sources": [
+        "Opinia Timișoarei (Timiș)"
+      ],
+      "text": "📰 <b>O nouă victorie italienească pentru Poli Timișoara. Alb-violeții, din nou lideri în Liga 2</b>\n📍 Opinia Timișoarei (Timiș)\nhttps://www.opiniatimisoarei.ro/o-noua-victorie-italieneasca-pentru-poli-timisoara-alb-violetii-din-nou-lideri-in-liga-2/21/11/2026\n#Timis",
+      "title": "O nouă victorie italienească pentru Poli Timișoara. Alb-violeții, din nou lideri în Liga 2",
+      "tokens": [
+        "itali",
+        "lider",
+        "liga",
+        "poli",
+        "timis",
+        "victo",
+        "viole"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "arad"
+      ],
+      "message_id": 17815,
+      "sent_at": "2026-11-21T12:30:52.617258+00:00",
+      "sources": [
+        "Antena3 (National)"
+      ],
+      "text": "📰 <b>O tânără a fost spulberată de o maşină, pe trotuar, în Arad. Şoferului vinovat i s-ar fi făcut rău la volan</b>\n📍 Antena3 (National)\nhttps://www.antena3.ro/actualitate/locale/o-tanara-a-fost-spulberata-de-o-masina-pe-trotuar-in-arad-soferului-vinovat-i-s-ar-fi-facut-rau-la-volan-812065.html\n#Arad",
+      "title": "O tânără a fost spulberată de o maşină, pe trotuar, în Arad. Şoferului vinovat i s-ar fi făcut rău la volan",
+      "tokens": [
+        "arad",
+        "masin",
+        "sofer",
+        "spulb",
+        "tanar",
+        "trotu",
+        "vinov",
+        "volan"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "arad"
+      ],
+      "message_id": 17816,
+      "sent_at": "2026-11-21T12:35:26.438007+00:00",
+      "sources": [
+        "Glasul Aradului (Arad)"
+      ],
+      "text": "📰 <b>Plin de polițiști, astăzi, pe DN 7</b>\n📍 Glasul Aradului (Arad)\nhttps://www.glsa.ro/plin-de-politisti-astazi-pe-dn-7/\n#Arad",
+      "title": "Plin de polițiști, astăzi, pe DN 7",
+      "tokens": [
+        "plin",
+        "polit"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 17817,
+      "sent_at": "2026-11-21T12:40:38.373568+00:00",
+      "sources": [
+        "Tribuna TM (Timiș)"
+      ],
+      "text": "📰 <b>Politehnica Timișoara a răpus Suceava pe „Areni” și urcă din nou pe primul loc. Victorie la limită</b>\n📍 Tribuna TM (Timiș)\nhttps://tribunasnm.ro/2026/11/21/politehnica-timisoara-a-rapus-suceava-pe-areni-si-urca-din-nou-pe-primul-loc-victorie-la-limita/\n#Timis",
+      "title": "Politehnica Timișoara a răpus Suceava pe „Areni” și urcă din nou pe primul loc. Victorie la limită",
+      "tokens": [
+        "areni",
+        "limit",
+        "polit",
+        "primu",
+        "rapus",
+        "sucea",
+        "timis",
+        "urca",
+        "victo"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "arad"
+      ],
+      "message_id": 17818,
+      "sent_at": "2026-11-21T12:45:33.416877+00:00",
+      "sources": [
+        "Glasul Aradului (Arad)"
+      ],
+      "text": "📰 <b>Investiții de 5 milioane de euro, din fonduri nerambursabile, în Litoralul Vestului</b>\n📍 Glasul Aradului (Arad)\nhttps://www.glsa.ro/investitii-de-5-milioane-de-euro-din-fonduri-nerambursabile-in-litoralul-vestului/\n#Arad",
+      "title": "Investiții de 5 milioane de euro, din fonduri nerambursabile, în Litoralul Vestului",
+      "tokens": [
+        "euro",
+        "fondu",
+        "inves",
+        "litor",
+        "milio",
+        "neram",
+        "vestu"
+      ]
+    }
+  ],
+  "update_offset": 276766160
+}
