@@ -1,0 +1,634 @@
+{
+  "baselined_feeds": [
+    "Tion.ro (Timiș)",
+    "Opinia Timișoarei (Timiș)",
+    "Ziua de Vest (Timiș)",
+    "Express de Banat (Timiș/Caraș-Severin)",
+    "Renașterea Bănățeană (Timiș)",
+    "Banat24 (Timiș/Banat)",
+    "PressAlert (Timiș)",
+    "Timișoara Știri (Timiș)",
+    "Sursa de Vest (Timiș)",
+    "Tribuna TM (Timiș)",
+    "Servus Press (Hunedoara)",
+    "Stiri din Hunedoara (Hunedoara)",
+    "Mesagerul Hunedorean (Hunedoara)",
+    "Aradon (Arad)",
+    "Arad24 (Arad)",
+    "Glasul Aradului (Arad)",
+    "Știrile CS (Caraș-Severin)",
+    "Reper24 (Caraș-Severin)",
+    "Antena3 (National)",
+    "Digi24 (National)",
+    "G4Media (National)",
+    "HotNews (National)",
+    "Adevarul (National)"
+  ],
+  "county_modes": {
+    "arad": "all",
+    "caras-severin": "all",
+    "hunedoara": "all",
+    "national": "both",
+    "timis": "all"
+  },
+  "feed_health": {
+    "Renașterea Bănățeană (Timiș)": {
+      "alerted": true,
+      "fails": 4034,
+      "last_error": "403 Client Error: Forbidden for url: https://renasterea.ro/feed"
+    }
+  },
+  "recent_stories": [
+    {
+      "extras": [
+        [
+          "Tribuna TM (Timiș)",
+          "https://tribunasnm.ro/2026/11/28/vindeau-droguri-in-locuri-publice-din-timisoara-dupa-ce-isi-racolau-clientii-online-sau-telefonic-sapte-suspecti-retinuti/"
+        ]
+      ],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 19393,
+      "sent_at": "2026-11-28T11:55:29.660307+00:00",
+      "sources": [
+        "Opinia Timișoarei (Timiș)",
+        "Tribuna TM (Timiș)"
+      ],
+      "text": "📰 <b>Traficanți de droguri cu cătușele la mâini. Își racolau clienții online la Timișoara</b>\n📍 Opinia Timișoarei (Timiș)\nhttps://www.opiniatimisoarei.ro/traficanti-de-droguri-cu-catusele-la-maini-isi-racolau-clientii-online-la-timisoara/28/11/2026\n#Timis",
+      "title": "Traficanți de droguri cu cătușele la mâini. Își racolau clienții online la Timișoara",
+      "tokens": [
+        "catus",
+        "clien",
+        "drogu",
+        "maini",
+        "onlin",
+        "racol",
+        "timis",
+        "trafi"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 19394,
+      "sent_at": "2026-11-28T11:55:29.660307+00:00",
+      "sources": [
+        "Sursa de Vest (Timiș)"
+      ],
+      "text": "📰 <b>Vindeau ciuperci halucinogene, canabis și „cristal 2- CMC și 3- CMC”, în Timișoara! Grupare de traficanți de droguri, destructurată de polițiști și de procurorii DIICOT</b>\n📍 Sursa de Vest (Timiș)\nhttps://www.sursadevest.ro/vindeau-ciuperci-halucinogene-canabis-si-cristal-2-cmc-si-3-cmc-in-timisoara-grupare-de-traficanti-de-droguri-destructurata-de-politisti-si-de-procurorii-diicot/\n#Timis",
+      "title": "Vindeau ciuperci halucinogene, canabis și „cristal 2- CMC și 3- CMC”, în Timișoara! Grupare de traficanți de droguri, destructurată de polițiști și de procurorii DIICOT",
+      "tokens": [
+        "canab",
+        "ciupe",
+        "crist",
+        "destr",
+        "diico",
+        "drogu",
+        "grupa",
+        "haluc",
+        "polit",
+        "procu",
+        "timis",
+        "trafi",
+        "vinde"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 19395,
+      "sent_at": "2026-11-28T12:00:59.159100+00:00",
+      "sources": [
+        "Tion.ro (Timiș)"
+      ],
+      "text": "📰 <b>Rețea de aprovizionare și vânzare de droguri, destructurată la Timișoara. Trei persoane au fost arestate</b>\n📍 Tion.ro (Timiș)\nhttps://www.tion.ro/eveniment/retea-de-aprovizionare-si-vanzare-de-droguri-destructurata-la-timisoara-trei-persoane-au-fost-arestate-2397465/?utm_source=rss&amp;utm_medium=referral&amp;utm_campaign=hiraggregator\n#Timis",
+      "title": "Rețea de aprovizionare și vânzare de droguri, destructurată la Timișoara. Trei persoane au fost arestate",
+      "tokens": [
+        "aprov",
+        "arest",
+        "destr",
+        "drogu",
+        "perso",
+        "retea",
+        "timis",
+        "trei",
+        "vanza"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 19396,
+      "sent_at": "2026-11-28T12:00:59.159100+00:00",
+      "sources": [
+        "Opinia Timișoarei (Timiș)"
+      ],
+      "text": "📰 <b>Golul vine de pe bancă. Poli Timișoara învinge Bihorul în derby-ul vestului. FOTO</b>\n📍 Opinia Timișoarei (Timiș)\nhttps://www.opiniatimisoarei.ro/golul-vine-de-pe-banca-poli-timisoara-invinge-bihorul-in-derby-ul-vestului-foto/28/11/2026\n#Timis",
+      "title": "Golul vine de pe bancă. Poli Timișoara învinge Bihorul în derby-ul vestului. FOTO",
+      "tokens": [
+        "banca",
+        "bihor",
+        "derby",
+        "golul",
+        "invin",
+        "poli",
+        "timis",
+        "vestu",
+        "vine"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "hunedoara"
+      ],
+      "message_id": 19397,
+      "sent_at": "2026-11-28T12:05:27.488173+00:00",
+      "sources": [
+        "Servus Press (Hunedoara)"
+      ],
+      "text": "📰 <b>Armata României recrutează rezerviști voluntari. Sunt disponibile 139 de locuri la nivel național</b>\n📍 Servus Press (Hunedoara)\nhttps://servuspress.ro/armata-romaniei-recruteaza-rezervisti-voluntari-sunt-disponibile-139-de-locuri-la-nivel-national_352651.html\n#Hunedoara",
+      "title": "Armata României recrutează rezerviști voluntari. Sunt disponibile 139 de locuri la nivel național",
+      "tokens": [
+        "armat",
+        "dispo",
+        "locur",
+        "natio",
+        "nivel",
+        "recru",
+        "rezer",
+        "roman",
+        "volun"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 19398,
+      "sent_at": "2026-11-28T12:10:37.082063+00:00",
+      "sources": [
+        "Antena3 (National)"
+      ],
+      "text": "🚨 <b>Noi imagini din satelit cu „podul lui Putin”, de la Kerci, publicate de serviile secrete britanice. „Avarii inclusiv la calea ferată”</b>\n📍 Antena3 (National)\nhttps://www.antena3.ro/externe/noi-imagini-din-satelit-cu-podul-lui-putin-de-la-kerci-publicate-de-serviile-secrete-britanice-avarii-inclusiv-la-calea-ferata-812969.html\n#National",
+      "title": "Noi imagini din satelit cu „podul lui Putin”, de la Kerci, publicate de serviile secrete britanice. „Avarii inclusiv la calea ferată”",
+      "tokens": [
+        "avari",
+        "brita",
+        "calea",
+        "ferat",
+        "imagi",
+        "inclu",
+        "kerci",
+        "podul",
+        "publi",
+        "putin",
+        "satel",
+        "secre",
+        "servi"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "arad"
+      ],
+      "message_id": 19399,
+      "sent_at": "2026-11-28T12:20:37.303887+00:00",
+      "sources": [
+        "Aradon (Arad)"
+      ],
+      "text": "📰 <b>Marcajele rutiere din municipiu, la licitație</b>\n📍 Aradon (Arad)\nhttps://www.aradon.ro/aradon-stirile-judetului-arad/marcajele-rutiere-din-municipiu-la-licitatie-2277486/?utm_source=rss&amp;utm_medium=referral&amp;utm_campaign=hiraggregator\n#Arad",
+      "title": "Marcajele rutiere din municipiu, la licitație",
+      "tokens": [
+        "licit",
+        "marca",
+        "munic",
+        "rutie"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "caras-severin"
+      ],
+      "message_id": 19400,
+      "sent_at": "2026-11-28T12:25:29.254596+00:00",
+      "sources": [
+        "Express de Banat (Timiș/Caraș-Severin)"
+      ],
+      "text": "📰 <b>De la scandalul de pe strada Bistra, la amenințări! Tânăr din Reșița, cercetat pentru ultraj</b>\n📍 Express de Banat (Timiș/Caraș-Severin)\nhttps://expressdebanat.ro/de-la-scandalul-de-pe-strada-bistra-la-amenintari-tanar-din-resita-cercetat-pentru-ultraj/\n#CarasSeverin",
+      "title": "De la scandalul de pe strada Bistra, la amenințări! Tânăr din Reșița, cercetat pentru ultraj",
+      "tokens": [
+        "ameni",
+        "bistr",
+        "cerce",
+        "resit",
+        "scand",
+        "strad",
+        "tanar",
+        "ultra"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 19401,
+      "sent_at": "2026-11-28T12:30:45.991761+00:00",
+      "sources": [
+        "Tribuna TM (Timiș)"
+      ],
+      "text": "📰 <b>Alexa a mutat inspirat și câștigător. Poli învinge Bihorul cu 2-0 și urcă din nou pe primul loc</b>\n📍 Tribuna TM (Timiș)\nhttps://tribunasnm.ro/2026/11/28/alexa-a-mutat-inspirat-si-castigator-poli-invinge-bihorul-cu-2-0-si-urca-din-nou-pe-primul-loc/\n#Timis",
+      "title": "Alexa a mutat inspirat și câștigător. Poli învinge Bihorul cu 2-0 și urcă din nou pe primul loc",
+      "tokens": [
+        "alexa",
+        "bihor",
+        "casti",
+        "inspi",
+        "invin",
+        "mutat",
+        "poli",
+        "primu",
+        "urca"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis",
+        "caras-severin"
+      ],
+      "message_id": 19402,
+      "sent_at": "2026-11-28T12:45:36.217198+00:00",
+      "sources": [
+        "Reper24 (Caraș-Severin)"
+      ],
+      "text": "📰 <b>Cello Fortissimo, momente de excepție la Festivalul Internațional „Sabin Pautza”, ediția a XIII-a</b>\n📍 Reper24 (Caraș-Severin)\nhttps://reper24.ro/cello-fortissimo-momente-de-exceptie-la-festivalul-international-sabin-pautza-editia-a-xiii-a/\n#Timis #CarasSeverin",
+      "title": "Cello Fortissimo, momente de excepție la Festivalul Internațional „Sabin Pautza”, ediția a XIII-a",
+      "tokens": [
+        "cello",
+        "editi",
+        "excep",
+        "festi",
+        "forti",
+        "inter",
+        "momen",
+        "pautz",
+        "sabin",
+        "xiii"
+      ]
+    },
+    {
+      "extras": [
+        [
+          "Reper24 (Caraș-Severin)",
+          "https://reper24.ro/tanar-din-resita-ridicat-de-politisti-dupa-amenintari-postate-pe-retelele-de-socializare/"
+        ]
+      ],
+      "groups": [
+        "caras-severin"
+      ],
+      "message_id": 19403,
+      "sent_at": "2026-11-28T12:55:30.953696+00:00",
+      "sources": [
+        "Ziua de Vest (Timiș)",
+        "Reper24 (Caraș-Severin)"
+      ],
+      "text": "📰 <b>Un tânăr din Reșița, anchetat după ce a amenințat polițiștii pe rețelele sociale. Acesta este monitorizat electronic într-un dosar de furt</b>\n📍 Ziua de Vest (Timiș)\nhttps://www.ziuadevest.ro/un-tanar-din-resita-anchetat-dupa-ce-a-amenintat-politistii-pe-retelele-sociale-acesta-este-monitorizat-electronic-intr-un-dosar-de-furt/\n#CarasSeverin",
+      "title": "Un tânăr din Reșița, anchetat după ce a amenințat polițiștii pe rețelele sociale. Acesta este monitorizat electronic într-un dosar de furt",
+      "tokens": [
+        "ameni",
+        "anche",
+        "dosar",
+        "elect",
+        "furt",
+        "monit",
+        "polit",
+        "resit",
+        "retel",
+        "socia",
+        "tanar"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis",
+        "hunedoara"
+      ],
+      "message_id": 19404,
+      "sent_at": "2026-11-28T13:00:59.049629+00:00",
+      "sources": [
+        "Ziua de Vest (Timiș)"
+      ],
+      "text": "📰 <b>Interregional Călători extinde serviciile cu rame electrice moderne și introduce noi conexiuni feroviare, cu facilități de confort și tarife fără costuri suplimentare.</b>\n📍 Ziua de Vest (Timiș)\nhttps://www.ziuadevest.ro/interregional-calatori-extinde-serviciile-cu-rame-electrice-moderne-si-introduce-noi-conexiuni-feroviare-cu-facilitati-de-confort-si-tarife-fara-costuri-suplimentare/\n#Timis #Hunedoara",
+      "title": "Interregional Călători extinde serviciile cu rame electrice moderne și introduce noi conexiuni feroviare, cu facilități de confort și tarife fără costuri suplimentare.",
+      "tokens": [
+        "calat",
+        "conex",
+        "confo",
+        "costu",
+        "elect",
+        "extin",
+        "facil",
+        "ferov",
+        "inter",
+        "intro",
+        "moder",
+        "rame",
+        "servi",
+        "supli",
+        "tarif"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 19405,
+      "sent_at": "2026-11-28T13:00:59.049629+00:00",
+      "sources": [
+        "Ziua de Vest (Timiș)"
+      ],
+      "text": "📰 <b>Poli Timișoara învinge FC Bihor cu 2-0 și încheie etapa pe primul loc în Liga a II-a</b>\n📍 Ziua de Vest (Timiș)\nhttps://www.ziuadevest.ro/poli-timisoara-invinge-fc-bihor-cu-2-0-si-incheie-etapa-pe-primul-loc-in-liga-a-ii-a/\n#Timis",
+      "title": "Poli Timișoara învinge FC Bihor cu 2-0 și încheie etapa pe primul loc în Liga a II-a",
+      "tokens": [
+        "bihor",
+        "etapa",
+        "inche",
+        "invin",
+        "liga",
+        "poli",
+        "primu",
+        "timis"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 19406,
+      "sent_at": "2026-11-28T13:00:59.049629+00:00",
+      "sources": [
+        "Ziua de Vest (Timiș)"
+      ],
+      "text": "📰 <b>Profesorii, transformați în ținte de presiunea părinților: „Vin cu casa de avocatură la întâlnirea cu dirigintele”. Un inspector școlar din Timiș avertizează că dascălii se tem să mai intervină</b>\n📍 Ziua de Vest (Timiș)\nhttps://www.ziuadevest.ro/profesorii-transformati-in-tinte-de-presiunea-parintilor-vin-cu-casa-de-avocatura-la-intalnirea-cu-dirigintele-un-inspector-scolar-din-timis-avertizeaza-ca-dascalii-se-tem-sa-mai/\n#Timis",
+      "title": "Profesorii, transformați în ținte de presiunea părinților: „Vin cu casa de avocatură la întâlnirea cu dirigintele”. Un inspector școlar din Timiș avertizează că dascălii se tem să mai intervină",
+      "tokens": [
+        "avert",
+        "avoca",
+        "casa",
+        "dasca",
+        "dirig",
+        "inspe",
+        "intal",
+        "inter",
+        "parin",
+        "presi",
+        "profe",
+        "scola",
+        "timis",
+        "tinte",
+        "trans"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 19407,
+      "sent_at": "2026-11-28T13:00:59.049629+00:00",
+      "sources": [
+        "HotNews (National)"
+      ],
+      "text": "🚨 <b>Comunicatul Agenției Antidrog după ce Alex Bogdan s-a retras din școli, unde urma să vorbească despre dependența de jocuri de noroc</b>\n📍 HotNews (National)\nhttps://hotnews.ro/comunicatul-agentiei-antidrog-dupa-ce-alex-bogdan-s-a-retras-din-scoli-unde-urma-sa-vorbeasca-despre-dependenta-de-jocuri-de-noroc-2416545\n#National",
+      "title": "Comunicatul Agenției Antidrog după ce Alex Bogdan s-a retras din școli, unde urma să vorbească despre dependența de jocuri de noroc",
+      "tokens": [
+        "agent",
+        "alex",
+        "antid",
+        "bogda",
+        "comun",
+        "depen",
+        "jocur",
+        "noroc",
+        "retra",
+        "scoli",
+        "vorbe"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 19408,
+      "sent_at": "2026-11-28T13:30:48.397130+00:00",
+      "sources": [
+        "Tribuna TM (Timiș)"
+      ],
+      "text": "📰 <b>Dan Alexa, după victoria cu Bihorul: „Sunt puncte care îți asigură în proporție foarte mare accederea în play-off”</b>\n📍 Tribuna TM (Timiș)\nhttps://tribunasnm.ro/2026/11/28/dan-alexa-dupa-victoria-cu-bihorul-sunt-puncte-care-iti-asigura-in-proportie-foarte-mare-accederea-in-play-off/\n#Timis",
+      "title": "Dan Alexa, după victoria cu Bihorul: „Sunt puncte care îți asigură în proporție foarte mare accederea în play-off”",
+      "tokens": [
+        "acced",
+        "alexa",
+        "asigu",
+        "bihor",
+        "play",
+        "propo",
+        "punct",
+        "victo"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 19409,
+      "sent_at": "2026-11-28T13:45:36.747294+00:00",
+      "sources": [
+        "Adevarul (National)"
+      ],
+      "text": "🚨 <b>Incendiu puternic într-o gospodărie din Eforie Nord. Flăcările s-au extins de la o anexă la acoperișul casei</b>\n📍 Adevarul (National)\nhttps://adevarul.ro/stiri-locale/constanta/incendiu-puternic-intr-o-gospodarie-din-eforie-2575201.html\n#National",
+      "title": "Incendiu puternic într-o gospodărie din Eforie Nord. Flăcările s-au extins de la o anexă la acoperișul casei",
+      "tokens": [
+        "acope",
+        "anexa",
+        "casei",
+        "efori",
+        "extin",
+        "flaca",
+        "gospo",
+        "incen",
+        "nord",
+        "puter"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 19410,
+      "sent_at": "2026-11-28T13:50:40.873380+00:00",
+      "sources": [
+        "Opinia Timișoarei (Timiș)"
+      ],
+      "text": "📰 <b>Trenuri electrice noi vor pleca din Gara de Nord Timișoara. Vor avea prize și mufe de încărcare a telefoanelor, spații mari pentru bagaje și toalete moderne. Rutele pe care vor circula</b>\n📍 Opinia Timișoarei (Timiș)\nhttps://www.opiniatimisoarei.ro/trenuri-electrice-noi-vor-pleca-din-gara-de-nord-timisoara-vor-avea-prize-si-mufe-de-incarcare-a-telefoanelor-spatii-mari-pentru-bagaje-si-toalete-moderne-rutele-pe-care-vor-circula/28/11/2026\n#Timis",
+      "title": "Trenuri electrice noi vor pleca din Gara de Nord Timișoara. Vor avea prize și mufe de încărcare a telefoanelor, spații mari pentru bagaje și toalete moderne. Rutele pe care vor circula",
+      "tokens": [
+        "bagaj",
+        "circu",
+        "elect",
+        "gara",
+        "incar",
+        "moder",
+        "mufe",
+        "nord",
+        "pleca",
+        "prize",
+        "rutel",
+        "spati",
+        "telef",
+        "timis",
+        "toale",
+        "trenu"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 19411,
+      "sent_at": "2026-11-28T14:00:56.002865+00:00",
+      "sources": [
+        "Adevarul (National)"
+      ],
+      "text": "🚨 <b>Explozie lângă o școală din Afganistan: șapte elevi au murit și aproape 100 de persoane au fost rănite</b>\n📍 Adevarul (National)\nhttps://adevarul.ro/stiri-externe/in-lume/explozie-langa-o-scoala-din-afganistan-sapte-2575203.html\n#National",
+      "title": "Explozie lângă o școală din Afganistan: șapte elevi au murit și aproape 100 de persoane au fost rănite",
+      "tokens": [
+        "afgan",
+        "aproa",
+        "elevi",
+        "explo",
+        "murit",
+        "perso",
+        "ranit",
+        "sapte",
+        "scoal"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 19412,
+      "sent_at": "2026-11-28T14:25:29.544196+00:00",
+      "sources": [
+        "Opinia Timișoarei (Timiș)"
+      ],
+      "text": "📰 <b>Crimă la Timișoara. Un bărbat și-a omorât mama cu o ganteră</b>\n📍 Opinia Timișoarei (Timiș)\nhttps://www.opiniatimisoarei.ro/crima-la-timisoara-un-barbat-si-a-omorat-mama-cu-o-gantera/28/11/2026\n#Timis",
+      "title": "Crimă la Timișoara. Un bărbat și-a omorât mama cu o ganteră",
+      "tokens": [
+        "barba",
+        "crima",
+        "gante",
+        "mama",
+        "omora",
+        "timis"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 19413,
+      "sent_at": "2026-11-28T14:40:46.130556+00:00",
+      "sources": [
+        "Digi24 (National)"
+      ],
+      "text": "🚨 <b>Accident grav în Mehedinți: Un om a murit după ce o mașină și un autovehicul cu platformă s-au ciocnit</b>\n📍 Digi24 (National)\nhttps://www.digi24.ro/stiri/accident-grav-in-mehedinti-un-om-a-murit-dupa-ce-o-masina-si-un-autovehicul-cu-platforma-s-au-ciocnit-4057085\n#National",
+      "title": "Accident grav în Mehedinți: Un om a murit după ce o mașină și un autovehicul cu platformă s-au ciocnit",
+      "tokens": [
+        "accid",
+        "autov",
+        "ciocn",
+        "grav",
+        "masin",
+        "mehed",
+        "murit",
+        "platf"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "national"
+      ],
+      "message_id": 19414,
+      "sent_at": "2026-11-28T14:40:46.130556+00:00",
+      "sources": [
+        "HotNews (National)"
+      ],
+      "text": "🚨 <b>Avertisment din Iran pentru Irakul vecin, „să nu devină un instrument al dușmanilor islamului și să nu cedeze politicilor criminalului Trump”</b>\n📍 HotNews (National)\nhttps://hotnews.ro/avertisment-din-iran-pentru-irakul-vecin-sa-nu-devina-un-instrument-al-dusmanilor-islamului-si-sa-nu-cedeze-politicilor-criminalului-trump-2416650\n#National",
+      "title": "Avertisment din Iran pentru Irakul vecin, „să nu devină un instrument al dușmanilor islamului și să nu cedeze politicilor criminalului Trump”",
+      "tokens": [
+        "avert",
+        "cedez",
+        "crimi",
+        "devin",
+        "dusma",
+        "instr",
+        "iraku",
+        "iran",
+        "islam",
+        "polit",
+        "trump",
+        "vecin"
+      ]
+    },
+    {
+      "extras": [],
+      "groups": [
+        "timis"
+      ],
+      "message_id": 19415,
+      "sent_at": "2026-11-28T14:45:34.217630+00:00",
+      "sources": [
+        "PressAlert (Timiș)"
+      ],
+      "text": "📰 <b>Traficanți de droguri, prinși în urma unei acțiuni ample a BCCO și DIICOT Timișoara. Unde își vindeau „produsele”</b>\n📍 PressAlert (Timiș)\nhttps://www.pressalert.ro/2026/11/traficanti-de-droguri-prinsi-in-urma-unei-actiuni-ample-a-bcco-si-diicot-timisoara-unde-isi-vindeau-produsele/\n#Timis",
+      "title": "Traficanți de droguri, prinși în urma unei acțiuni ample a BCCO și DIICOT Timișoara. Unde își vindeau „produsele”",
+      "tokens": [
+        "actiu",
+        "ample",
+        "bcco",
+        "diico",
+        "drogu",
+        "prins",
+        "produ",
+        "timis",
+        "trafi",
+        "vinde"
+      ]
+    }
+  ],
+  "update_offset": 276766161
+}
